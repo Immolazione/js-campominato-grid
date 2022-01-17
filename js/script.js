@@ -6,3 +6,8 @@ console.log('JS OK');
 // con difficoltà 2 => tra 1 e 81
 // con difficoltà 3 => tra 1 e 49
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
+
+// RECUPERO GLI ELEMENTI DAL DOM
+const selectDifficulty = document.getElementById('number-of-cells');
+const generateButton = document.getElementById('generate');
+const grid = document.getElementById('grid');
