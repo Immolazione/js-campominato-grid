@@ -10,26 +10,39 @@ console.log('JS OK');
 // ! RECUPERO GLI ELEMENTI DAL DOM
 const selectDifficulty = document.getElementById('number-of-cells');
 const grid = document.getElementById('grid');
-let diff = document.querySelectorAll('diff');
 const generateButton = document.getElementById('generate');
 
 // ! FUNZIONI NEUTRE
 // const getRandNumber = (min, max) => Math.floor(Math.random() * (max - min) + 1 ) + min;
 // console.log(getRandNumber(1, 100));
 
+// AGGIUNGO OPTIONS
 
 
-console.log(diff.value);
 
+
+
+
+// let diff = document.querySelectorAll('.diff');
+// function difficulty (diff) {
+
+//     if (diff.value === 100) {
+//         diff = 100;
+//         diff.classList.add('cell-100')
+//     } else if (diff.value === 81) {
+//         diff = 81;
+//         diff.classList.add('cell-81')
+//     } else if (diff.value === 49) {
+//         diff = 49;
+//         diff.classList.add('cell-49')
+//     }
+//     console.log(diff.value);
+// }
+
+
+// GENERATE BUTTON
 generateButton.addEventListener('click', function () {
-    if (diff.value === 100) {
-        diff = 100;
-    } else if (diff.value === 81) {
-        diff = 81;
-    } else if (diff.value === 49) {
-        diff = 49;
-    }
-    
+
     // CREO CELLE
     let cell100;
     let number100;
