@@ -9,10 +9,12 @@ console.log('JS OK');
 
 // RECUPERO GLI ELEMENTI DAL DOM
 const selectDifficulty = document.getElementById('number-of-cells');
-const generateButton = document.getElementById('generate');
 const grid = document.getElementById('grid');
 const grid100 = document.getElementById('100');
 const grid81 = document.getElementById('81');
 const grid49 = document.getElementById('49');
+const generateButton = document.getElementById('generate');
 
 // FUNZIONI NEUTRE
+const getRandNumber = (min, max) => Math.floor(Math.random() * (max - min) + 1 ) + min;
+console.log(getRandNumber(1, 100));
