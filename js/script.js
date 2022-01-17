@@ -11,3 +11,8 @@ console.log('JS OK');
 const selectDifficulty = document.getElementById('number-of-cells');
 const generateButton = document.getElementById('generate');
 const grid = document.getElementById('grid');
+const grid100 = document.getElementById('100');
+const grid81 = document.getElementById('81');
+const grid49 = document.getElementById('49');
+
+// FUNZIONI NEUTRE
