@@ -3,3 +3,23 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+header {
+    height: 100px;
+    line-height: 100px;
+    background-color: dodgerblue;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header  select {
+    height: 40px;
+    width: 100px;
+}
+
+header > div > button {
+    width: 100px;
+    height: 40px;
+}
