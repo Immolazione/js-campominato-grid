@@ -18,6 +18,7 @@ let cell;
 generateButton.addEventListener('click', function(){
 
     grid.innerText = '';
+    generateButton.innerText = 'Ricomincia';
 
     difficulty = document.getElementById('number-of-cells').value;
     if (difficulty === 100) {
