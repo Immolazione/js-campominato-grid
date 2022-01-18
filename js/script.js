@@ -13,8 +13,12 @@ const grid = document.getElementById('grid');
 const generateButton = document.getElementById('generate');
 
 let col;
+let cell; 
 
 generateButton.addEventListener('click', function(){
+
+    grid.innerText = '';
+
     difficulty = document.getElementById('number-of-cells').value;
     if (difficulty === 100) {
         col = Math.sqrt(difficulty);
@@ -25,10 +29,11 @@ generateButton.addEventListener('click', function(){
     };
     console.log(col);
     for(i = 0; i < difficulty; i++) {
-        let cell = document.createElement('div');
+        cell = document.createElement('div');
         cell.classList.add('cell');
         grid.appendChild(cell);
         cell.style.width = `calc(100% / ${col})`
         cell.style.height = `calc(100% / ${col})`
+
     }
 });
