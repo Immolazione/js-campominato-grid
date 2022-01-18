@@ -46,6 +46,7 @@ main {
 .cell {
     border: 1px dashed white;
     color: white;
+    cursor: pointer;
 }
 
 
