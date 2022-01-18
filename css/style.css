@@ -43,26 +43,11 @@ main {
     flex-wrap: wrap;
 }
 
-.cell-100 {
-    width: calc(100% / 10);
-    height: calc(100% / 10);
-    border: 1px solid white;
+.cell {
+    border: 1px dashed white;
     color: white;
 }
 
-.cell-81 {
-    width: calc(100% / 9);
-    height: calc(100% / 9);
-    border: 1px solid white;
-    color: white;
-}
-
-.cell-49 {
-    width: calc(100% / 7);
-    height: calc(100% / 7);
-    border: 1px solid white;
-    color: white;
-}
 
 .clicked {
     background-color: lightblue;
