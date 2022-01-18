@@ -36,7 +36,7 @@ generateButton.addEventListener('click', function(){
         cell.style.height = `calc(100% / ${col})`
         cell.innerText = i + 1;
         cell.addEventListener('click', function() {
-            cell.classList.add('clicked');
+            cell.classList.toggle('clicked');
         })
 
         grid.appendChild(cell);
