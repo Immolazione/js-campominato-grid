@@ -8,29 +8,27 @@ console.log('JS OK');
 // Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
 
 // ! RECUPERO GLI ELEMENTI DAL DOM
-const difficulty = document.getElementById('number-of-cells').value;
+let difficulty;
 const grid = document.getElementById('grid');
 const generateButton = document.getElementById('generate');
-console.log(difficulty);
 
+let col;
 
-
-// GENERATE BUTTON
-generateButton.addEventListener('click', function () {
-    
-
-    // CREO CELLE
-
-
-
-    // let cell100;
-    // let number100;
-    // for (i = 0; i < difficulty; i++) {
-    //     cell100 = document.createElement('div');
-    //     cell100.classList.add('cell-100')
-    //     grid.appendChild(cell100);
-    //     number100 = (i + 1);
-    //     cell100.innerHTML = `${number100}`;
-    //     console.log(number100);
-    // }
-})
+generateButton.addEventListener('click', function(){
+    difficulty = document.getElementById('number-of-cells').value;
+    if (difficulty === 100) {
+        col = Math.sqrt(difficulty);
+    } else if (difficulty === 81){
+        col = Math.sqrt(difficulty);
+    } else {
+        col = Math.sqrt(difficulty);
+    };
+    console.log(col);
+    for(i = 0; i < difficulty; i++) {
+        let cell = document.createElement('div');
+        cell.classList.add('cell');
+        grid.appendChild(cell);
+        cell.style.width = `calc(100% / ${col})`
+        cell.style.height = `calc(100% / ${col})`
+    }
+});
