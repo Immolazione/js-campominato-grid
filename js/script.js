@@ -38,3 +38,7 @@ generateButton.addEventListener('click', function(){
         cell.innerText = i + 1;
     }
 });
+
+cell.addEventListener('toggle', function(cell) {
+    cell.classList.add = 'clicked';
+});
