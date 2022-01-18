@@ -13,7 +13,6 @@ const grid = document.getElementById('grid');
 const generateButton = document.getElementById('generate');
 
 let col;
-let cell; 
 
 generateButton.addEventListener('click', function(){
 
@@ -21,24 +20,30 @@ generateButton.addEventListener('click', function(){
     generateButton.innerText = 'Ricomincia';
 
     difficulty = document.getElementById('number-of-cells').value;
-    if (difficulty === 100) {
-        col = Math.sqrt(difficulty);
-    } else if (difficulty === 81){
-        col = Math.sqrt(difficulty);
-    } else {
-        col = Math.sqrt(difficulty);
-    };
+    // if (difficulty === 100) {
+    //     col = Math.sqrt(difficulty);
+    // } else if (difficulty === 81){
+    //     col = Math.sqrt(difficulty);
+    // } else {
+    //     col = Math.sqrt(difficulty);
+    // };
+    col = Math.sqrt(difficulty);
     console.log(col);
     for(i = 0; i < difficulty; i++) {
-        cell = document.createElement('div');
+        const cell = document.createElement('div');
         cell.classList.add('cell');
-        grid.appendChild(cell);
         cell.style.width = `calc(100% / ${col})`
         cell.style.height = `calc(100% / ${col})`
         cell.innerText = i + 1;
+        cell.addEventListener('click', function() {
+            cell.classList.add('clicked');
+        })
+
+        grid.appendChild(cell);
     }
+
 });
 
-cell.addEventListener('toggle', function(cell) {
-    cell.classList.add = 'clicked';
-});
+// cell.addEventListener('toggle', function(cell) {
+//     cell.classList.add = 'clicked';
+// });
