@@ -35,6 +35,6 @@ generateButton.addEventListener('click', function(){
         grid.appendChild(cell);
         cell.style.width = `calc(100% / ${col})`
         cell.style.height = `calc(100% / ${col})`
-
+        cell.innerText = i + 1;
     }
 });
